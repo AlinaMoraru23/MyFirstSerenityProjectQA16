@@ -86,8 +86,8 @@
                     <argLine>-Xmx512m</argLine>
                     <systemPropertyVariables>
                         <webdriver.driver>${webdriver.driver}</webdriver.driver>
-<!--                        <webdriver.chrome.driver>resources/chromedriver</webdriver.chrome.driver>-->
-                        <webdriver.chrome.driver>resources/chromedriver.exe</webdriver.chrome.driver>
+                        <webdriver.chrome.driver>resources/chromedriver</webdriver.chrome.driver>
+<!--                        <webdriver.chrome.driver>resources/chromedriver.exe</webdriver.chrome.driver>-->
                     </systemPropertyVariables>
                 </configuration>
                 <executions>

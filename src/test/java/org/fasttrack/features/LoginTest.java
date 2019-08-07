@@ -27,9 +27,9 @@ public class LoginTest {
     private LoginSteps loginSteps;
 
 
-    private String userEmail = "cosmin@fasttrackit.org";
-    private String userPass = "123456";
-    private String userName = "asdasda asdasd";
+    private String userEmail = "alina.moraru.qa@gmail.com";
+    private String userPass = "Pass23";
+    private String userName = "Alina Moraru";
 
     @Test
     public void validLoginTest() {
