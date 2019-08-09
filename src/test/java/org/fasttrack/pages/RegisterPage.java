@@ -27,6 +27,9 @@ public class RegisterPage extends PageObject {
     @FindBy(css = ".button[title='Register']")
     private WebElementFacade registerButton;
 
+    @FindBy(css = ".error-msg span")
+    private WebElementFacade errorMessageSpan;
+
     public void setFirstNameField(String fistName) {
         typeInto(firstNameField, fistName);
     }
@@ -50,7 +53,13 @@ public class RegisterPage extends PageObject {
     public void clickRegisterButton(){
         clickOn(registerButton);
     }
+
+    public void verifyUserAlreadyTaken() {
+        errorMessageSpan.shouldContainText("There is already an account with this email address");
+    }
+
 }
+
 
 
 

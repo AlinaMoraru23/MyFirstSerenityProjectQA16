@@ -20,13 +20,18 @@ public class RegisterSteps {
     }
 
     @Step
-    public void performRegiste(String firstName, String lastName, String email, String password, String confirmPassword){
+    public void performRegister(String firstName, String lastName, String email, String password, String confirmPassword){
         registerPage.setFirstNameField(firstName);
         registerPage.setLastNameField(lastName);
         registerPage.setEmailAddressField(email);
         registerPage.setPasswordField(password);
         registerPage.setConfirmPasswordField(confirmPassword);
         registerPage.clickRegisterButton();
+    }
+
+    @Step
+    public void checkUserAlreadyTaken(){
+        registerPage.verifyUserAlreadyTaken();
     }
 
 

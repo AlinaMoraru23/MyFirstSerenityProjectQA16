@@ -13,6 +13,11 @@ public class LoginSteps {
     private LoginPage loginPage;
 
     @Step
+    public void navigateToHomePage(){
+        homePage.open();
+    }
+
+    @Step
     public void navigateToLoginPage(){
         homePage.open();
         homePage.clickAccount();

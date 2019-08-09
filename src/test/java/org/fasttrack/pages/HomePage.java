@@ -4,6 +4,7 @@ import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
+import org.yecht.Data;
 
 @DefaultUrl("https://fasttrackit.org/selenium-test/")
 public class HomePage extends PageObject {
@@ -18,7 +19,11 @@ public class HomePage extends PageObject {
     @FindBy(css = "a[title='Register']")
     private WebElementFacade registerLink;
 
+    @FindBy(id = "search")
+    private WebElementFacade searchField;
 
+    @FindBy(css = "button[title='Search']")
+    private WebElementFacade searchButton;
 
     public void clickAccount(){
         clickOn(accountLink);
@@ -30,6 +35,14 @@ public class HomePage extends PageObject {
 
     public void clickRegisterLink(){
         clickOn(registerLink);
+    }
+
+    public void setSearchItem(String searchItem){
+        typeInto(searchField, searchItem );
+    }
+
+    public void clickSearchButton(){
+        clickOn(searchButton);
     }
 
 }
