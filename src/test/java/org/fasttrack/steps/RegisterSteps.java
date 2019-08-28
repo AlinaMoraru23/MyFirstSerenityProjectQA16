@@ -1,7 +1,6 @@
 package org.fasttrack.steps;
 
 import net.thucydides.core.annotations.Step;
-import org.fasttrack.pages.AccountPage;
 import org.fasttrack.pages.HomePage;
 import org.fasttrack.pages.RegisterPage;
 

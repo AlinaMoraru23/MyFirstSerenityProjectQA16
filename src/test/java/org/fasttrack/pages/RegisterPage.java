@@ -4,7 +4,7 @@ import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
-import org.openqa.selenium.WebElement;
+
 
 @DefaultUrl("https://fasttrackit.org/selenium-test/customer/account/create/")
 public class RegisterPage extends PageObject {
@@ -29,6 +29,8 @@ public class RegisterPage extends PageObject {
 
     @FindBy(css = ".error-msg span")
     private WebElementFacade errorMessageSpan;
+
+
 
     public void setFirstNameField(String fistName) {
         typeInto(firstNameField, fistName);

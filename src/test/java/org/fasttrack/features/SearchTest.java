@@ -22,6 +22,8 @@ public class SearchTest {
     private LoginSteps loginSteps;
 
 
+
+
     @Test
     public void searchItem(){
         loginSteps.navigateToHomePage();
@@ -29,6 +31,25 @@ public class SearchTest {
         searchSteps.checkProductInResults("SILVER DESERT NECKLACE");
     }
 
+    @Test
+    public void sortSearchResultsByPriceAscending(){
+        loginSteps.navigateToHomePage();
+        searchSteps.searchItem("necklace");
+        searchSteps.sortResultsByPrice();
+        searchSteps.sortAscending();
+        searchSteps.getPriceOfFirstAndLastProduct();
+        searchSteps.checkResultsSortedByPriceAscending();
+    }
+
+    @Test
+    public void sortSearchResultsByPriceDescending(){
+        loginSteps.navigateToHomePage();
+        searchSteps.searchItem("necklace");
+        searchSteps.sortResultsByPrice();
+        searchSteps.sortDescending();
+        searchSteps.getPriceOfFirstAndLastProduct();
+        searchSteps.checkResulteSortedByPriceDescending();
+    }
 
 
 }

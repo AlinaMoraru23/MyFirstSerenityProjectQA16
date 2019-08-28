@@ -4,9 +4,9 @@ package org.fasttrack.features;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
+import org.fasttrack.Util.Constants;
 import org.fasttrack.steps.LoginSteps;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -27,21 +27,18 @@ public class LoginTest {
     private LoginSteps loginSteps;
 
 
-    private String userEmail = "alina.moraru.qa@gmail.com";
-    private String userPass = "Pass23";
-    private String userName = "Alina Moraru";
 
     @Test
     public void validLoginTest() {
         loginSteps.navigateToLoginPage();
-        loginSteps.performLogin(userEmail, userPass);
-        loginSteps.checkLoggedIn(userName);
+        loginSteps.performLogin(Constants.USER_EMAIL, Constants.USER_PASS);
+        loginSteps.checkLoggedIn(Constants.USER_NAME);
     }
 
     @Test
     public void invalidLoginTest() {
         loginSteps.navigateToLoginPage();
-        loginSteps.performLogin(userEmail, "aaaaaaaaa");
+        loginSteps.performLogin(Constants.USER_EMAIL, "aaaaaaaaa");
         loginSteps.checkNotLoggedIn();
     }
 
